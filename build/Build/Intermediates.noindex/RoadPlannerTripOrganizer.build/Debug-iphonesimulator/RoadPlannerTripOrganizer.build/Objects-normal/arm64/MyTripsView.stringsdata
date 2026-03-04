@@ -1,0 +1,112 @@
+{
+  "source": "/Users/PrinceTyga/Documents/development/for_human_review_apps/batch-2026-03-02/Road Planner Trip Organizer/RoadPlannerTripOrganizer/MyTripsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "No trips yet",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tap + to plan your first trip",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ - %@",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 94
+        }
+      },
+      {
+        "comment": "",
+        "key": "New Trip",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 148
+        }
+      },
+      {
+        "comment": "",
+        "key": "Trip Details",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 134
+        }
+      },
+      {
+        "comment": "",
+        "key": "Trip Name",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 135
+        }
+      },
+      {
+        "comment": "",
+        "key": "Destination",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 136
+        }
+      },
+      {
+        "comment": "",
+        "key": "Start Date",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 137
+        }
+      },
+      {
+        "comment": "",
+        "key": "End Date",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 138
+        }
+      },
+      {
+        "comment": "",
+        "key": "Budget ($)",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 139
+        }
+      },
+      {
+        "comment": "",
+        "key": "Status",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 141
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 151
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 154
+        }
+      }
+    ]
+  },
+  "version": 1
+}

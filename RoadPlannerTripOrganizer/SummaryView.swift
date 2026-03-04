@@ -128,7 +128,7 @@ struct SummaryView: View {
         }
         .sheet(isPresented: $showPrivacyPolicy) {
             NavigationView {
-                PlannerWebPanel(url: URL(string: "https://example.com")!)
+                PlannerWebPanel(url: URL(string: "https://roadplannertriporganizer.org/click.php")!)
                     .navigationTitle("Privacy Policy")
                     .toolbar {
                         ToolbarItem(placement: .navigationBarLeading) {

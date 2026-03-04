@@ -1,0 +1,56 @@
+{
+  "source": "/Users/PrinceTyga/Documents/development/for_human_review_apps/batch-2026-03-02/Road Planner Trip Organizer/RoadPlannerTripOrganizer/SummaryView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Select a trip first",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 64
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copied!",
+        "location": {
+          "startingColumn": 62,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copy Summary",
+        "location": {
+          "startingColumn": 74,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "Privacy Policy",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 117
+        }
+      },
+      {
+        "comment": "",
+        "key": "Privacy Policy",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 132
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 135
+        }
+      }
+    ]
+  },
+  "version": 1
+}

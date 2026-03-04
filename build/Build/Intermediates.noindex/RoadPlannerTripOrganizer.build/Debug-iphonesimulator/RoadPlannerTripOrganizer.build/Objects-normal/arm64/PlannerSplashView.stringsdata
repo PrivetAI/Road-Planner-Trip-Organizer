@@ -1,0 +1,24 @@
+{
+  "source": "/Users/PrinceTyga/Documents/development/for_human_review_apps/batch-2026-03-02/Road Planner Trip Organizer/RoadPlannerTripOrganizer/PlannerSplashView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Road Planner",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 11
+        }
+      },
+      {
+        "comment": "",
+        "key": "Trip Organizer",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 14
+        }
+      }
+    ]
+  },
+  "version": 1
+}

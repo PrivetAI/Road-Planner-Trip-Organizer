@@ -1,0 +1,80 @@
+{
+  "source": "/Users/PrinceTyga/Documents/development/for_human_review_apps/batch-2026-03-02/Road Planner Trip Organizer/RoadPlannerTripOrganizer/ChecklistView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Reset Checklist",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "Packed: %lld%%",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 63
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld/%lld",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 67
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select a trip first",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 133
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Item",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 148
+        }
+      },
+      {
+        "comment": "",
+        "key": "Item Name",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 141
+        }
+      },
+      {
+        "comment": "",
+        "key": "Category",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 142
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 151
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 154
+        }
+      }
+    ]
+  },
+  "version": 1
+}

