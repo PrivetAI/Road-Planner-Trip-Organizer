@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA000001 /* RoadPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001 /* RoadPlannerApp.swift */; };
+		AA000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000002 /* ContentView.swift */; };
+		AA000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB000003 /* Assets.xcassets */; };
+		AA000004 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000004 /* Models.swift */; };
+		AA000005 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000005 /* DataStore.swift */; };
+		AA000006 /* MyTripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000006 /* MyTripsView.swift */; };
+		AA000007 /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000007 /* ChecklistView.swift */; };
+		AA000008 /* ItineraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000008 /* ItineraryView.swift */; };
+		AA000009 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000009 /* BudgetView.swift */; };
+		AA000010 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000010 /* SummaryView.swift */; };
+		AA000011 /* CustomIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000011 /* CustomIcons.swift */; };
+		AA000012 /* PlannerWebPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000012 /* PlannerWebPanel.swift */; };
+		AA000013 /* PlannerSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000013 /* PlannerSplashView.swift */; };
+		AA000014 /* PlannerRedirectTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000014 /* PlannerRedirectTracker.swift */; };
+		AA000015 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000015 /* Theme.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB000001 /* RoadPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadPlannerApp.swift; sourceTree = "<group>"; };
+		BB000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB000003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB000004 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		BB000005 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		BB000006 /* MyTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsView.swift; sourceTree = "<group>"; };
+		BB000007 /* ChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistView.swift; sourceTree = "<group>"; };
+		BB000008 /* ItineraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryView.swift; sourceTree = "<group>"; };
+		BB000009 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
+		BB000010 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		BB000011 /* CustomIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIcons.swift; sourceTree = "<group>"; };
+		BB000012 /* PlannerWebPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerWebPanel.swift; sourceTree = "<group>"; };
+		BB000013 /* PlannerSplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerSplashView.swift; sourceTree = "<group>"; };
+		BB000014 /* PlannerRedirectTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerRedirectTracker.swift; sourceTree = "<group>"; };
+		BB000015 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		CC000001 /* RoadPlannerTripOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadPlannerTripOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE000001 = {
+			isa = PBXGroup;
+			children = (
+				EE000002 /* RoadPlannerTripOrganizer */,
+				EE000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE000002 /* RoadPlannerTripOrganizer */ = {
+			isa = PBXGroup;
+			children = (
+				BB000001 /* RoadPlannerApp.swift */,
+				BB000002 /* ContentView.swift */,
+				BB000004 /* Models.swift */,
+				BB000005 /* DataStore.swift */,
+				BB000006 /* MyTripsView.swift */,
+				BB000007 /* ChecklistView.swift */,
+				BB000008 /* ItineraryView.swift */,
+				BB000009 /* BudgetView.swift */,
+				BB000010 /* SummaryView.swift */,
+				BB000011 /* CustomIcons.swift */,
+				BB000012 /* PlannerWebPanel.swift */,
+				BB000013 /* PlannerSplashView.swift */,
+				BB000014 /* PlannerRedirectTracker.swift */,
+				BB000015 /* Theme.swift */,
+				BB000003 /* Assets.xcassets */,
+			);
+			path = RoadPlannerTripOrganizer;
+			sourceTree = "<group>";
+		};
+		EE000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC000001 /* RoadPlannerTripOrganizer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF000001 /* RoadPlannerTripOrganizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF000010 /* Build configuration list for PBXNativeTarget "RoadPlannerTripOrganizer" */;
+			buildPhases = (
+				FF000002 /* Sources */,
+				DD000001 /* Frameworks */,
+				FF000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoadPlannerTripOrganizer;
+			productName = RoadPlannerTripOrganizer;
+			productReference = CC000001 /* RoadPlannerTripOrganizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF000099 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					FF000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = FF000098 /* Build configuration list for PBXProject "RoadPlannerTripOrganizer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE000001;
+			productRefGroup = EE000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF000001 /* RoadPlannerTripOrganizer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000003 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000001 /* RoadPlannerApp.swift in Sources */,
+				AA000002 /* ContentView.swift in Sources */,
+				AA000004 /* Models.swift in Sources */,
+				AA000005 /* DataStore.swift in Sources */,
+				AA000006 /* MyTripsView.swift in Sources */,
+				AA000007 /* ChecklistView.swift in Sources */,
+				AA000008 /* ItineraryView.swift in Sources */,
+				AA000009 /* BudgetView.swift in Sources */,
+				AA000010 /* SummaryView.swift in Sources */,
+				AA000011 /* CustomIcons.swift in Sources */,
+				AA000012 /* PlannerWebPanel.swift in Sources */,
+				AA000013 /* PlannerSplashView.swift in Sources */,
+				AA000014 /* PlannerRedirectTracker.swift in Sources */,
+				AA000015 /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FF000020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF000021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF000030 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RoadPlannerTripOrganizer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Road Planner";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roadapp.triporganizer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FF000031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RoadPlannerTripOrganizer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Road Planner";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roadapp.triporganizer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF000010 /* Build configuration list for PBXNativeTarget "RoadPlannerTripOrganizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF000030 /* Debug */,
+				FF000031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF000098 /* Build configuration list for PBXProject "RoadPlannerTripOrganizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF000020 /* Debug */,
+				FF000021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF000099 /* Project object */;
+}
