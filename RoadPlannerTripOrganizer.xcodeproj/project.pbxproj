@@ -16,12 +16,17 @@
 		AA000007 /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000007 /* ChecklistView.swift */; };
 		AA000008 /* ItineraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000008 /* ItineraryView.swift */; };
 		AA000009 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000009 /* BudgetView.swift */; };
+		AA000016 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000016 /* JournalView.swift */; };
+		AA000017 /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000017 /* EmergencyView.swift */; };
+		AA000018 /* DocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000018 /* DocumentsView.swift */; };
 		AA000010 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000010 /* SummaryView.swift */; };
 		AA000011 /* CustomIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000011 /* CustomIcons.swift */; };
 		AA000012 /* PlannerWebPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000012 /* PlannerWebPanel.swift */; };
 		AA000013 /* PlannerSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000013 /* PlannerSplashView.swift */; };
 		AA000014 /* PlannerRedirectTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000014 /* PlannerRedirectTracker.swift */; };
 		AA000015 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000015 /* Theme.swift */; };
+		AA000019 /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000019 /* WeightView.swift */; };
+		AA000020 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000020 /* StatisticsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +39,17 @@
 		BB000007 /* ChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistView.swift; sourceTree = "<group>"; };
 		BB000008 /* ItineraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryView.swift; sourceTree = "<group>"; };
 		BB000009 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
+		BB000016 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		BB000017 /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
+		BB000018 /* DocumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsView.swift; sourceTree = "<group>"; };
 		BB000010 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		BB000011 /* CustomIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIcons.swift; sourceTree = "<group>"; };
 		BB000012 /* PlannerWebPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerWebPanel.swift; sourceTree = "<group>"; };
 		BB000013 /* PlannerSplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerSplashView.swift; sourceTree = "<group>"; };
 		BB000014 /* PlannerRedirectTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerRedirectTracker.swift; sourceTree = "<group>"; };
 		BB000015 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		BB000019 /* WeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightView.swift; sourceTree = "<group>"; };
+		BB000020 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		CC000001 /* RoadPlannerTripOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadPlannerTripOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,6 +83,11 @@
 				BB000007 /* ChecklistView.swift */,
 				BB000008 /* ItineraryView.swift */,
 				BB000009 /* BudgetView.swift */,
+				BB000016 /* JournalView.swift */,
+				BB000017 /* EmergencyView.swift */,
+				BB000018 /* DocumentsView.swift */,
+				BB000019 /* WeightView.swift */,
+				BB000020 /* StatisticsView.swift */,
 				BB000010 /* SummaryView.swift */,
 				BB000011 /* CustomIcons.swift */,
 				BB000012 /* PlannerWebPanel.swift */,
@@ -169,6 +184,11 @@
 				AA000007 /* ChecklistView.swift in Sources */,
 				AA000008 /* ItineraryView.swift in Sources */,
 				AA000009 /* BudgetView.swift in Sources */,
+				AA000016 /* JournalView.swift in Sources */,
+				AA000017 /* EmergencyView.swift in Sources */,
+				AA000018 /* DocumentsView.swift in Sources */,
+				AA000019 /* WeightView.swift in Sources */,
+				AA000020 /* StatisticsView.swift in Sources */,
 				AA000010 /* SummaryView.swift in Sources */,
 				AA000011 /* CustomIcons.swift in Sources */,
 				AA000012 /* PlannerWebPanel.swift in Sources */,
@@ -233,7 +253,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RoadPlannerTripOrganizer/Info.plist;
@@ -267,7 +287,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RoadPlannerTripOrganizer/Info.plist;

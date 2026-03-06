@@ -46,12 +46,40 @@ struct ContentView: View {
                 }
                 .tag(3)
 
-            SummaryView()
+            JournalView()
                 .tabItem {
-                    shapeImage(FlagIcon())
-                    Text("Summary")
+                    shapeImage(JournalIcon())
+                    Text("Journal")
                 }
                 .tag(4)
+
+            EmergencyView()
+                .tabItem {
+                    shapeImage(ShieldIcon())
+                    Text("Emergency")
+                }
+                .tag(5)
+
+            DocumentsView()
+                .tabItem {
+                    shapeImage(DocumentIcon())
+                    Text("Documents")
+                }
+                .tag(6)
+
+            WeightView()
+                .tabItem {
+                    shapeImage(WeightIcon())
+                    Text("Weight")
+                }
+                .tag(7)
+
+            StatisticsView()
+                .tabItem {
+                    shapeImage(ChartIcon())
+                    Text("Statistics")
+                }
+                .tag(8)
         }
         .accentColor(Theme.gold)
         .preferredColorScheme(.light)

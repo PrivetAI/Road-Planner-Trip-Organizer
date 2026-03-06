@@ -69,6 +69,29 @@ struct TripCardView: View {
         }
     }
 
+    var countdownText: String {
+        let now = Date()
+        let calendar = Calendar.current
+        
+        switch trip.status {
+        case .completed:
+            return "Completed"
+        case .active:
+            let totalDays = calendar.dateComponents([.day], from: trip.startDate, to: trip.endDate).day ?? 0
+            let currentDay = calendar.dateComponents([.day], from: trip.startDate, to: now).day ?? 0
+            return "Day \(currentDay + 1) of \(totalDays + 1)"
+        case .planned:
+            let daysUntil = calendar.dateComponents([.day], from: now, to: trip.startDate).day ?? 0
+            if daysUntil == 0 {
+                return "Starts today"
+            } else if daysUntil == 1 {
+                return "1 day until trip"
+            } else {
+                return "\(daysUntil) days until trip"
+            }
+        }
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
@@ -99,13 +122,19 @@ struct TripCardView: View {
                     .font(.caption.bold())
                     .foregroundColor(Theme.gold)
             }
-            Text(trip.status.rawValue)
-                .font(.caption2.bold())
-                .foregroundColor(.white)
-                .padding(.horizontal, 8)
-                .padding(.vertical, 3)
-                .background(statusColor)
-                .cornerRadius(8)
+            HStack {
+                Text(trip.status.rawValue)
+                    .font(.caption2.bold())
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 3)
+                    .background(statusColor)
+                    .cornerRadius(8)
+                Spacer()
+                Text(countdownText)
+                    .font(.caption.bold())
+                    .foregroundColor(Theme.gold)
+            }
         }
         .padding()
         .background(Theme.white)

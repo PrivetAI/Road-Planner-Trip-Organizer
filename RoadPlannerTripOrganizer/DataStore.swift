@@ -17,6 +17,15 @@ class DataStore: ObservableObject {
     @Published var expenses: [UUID: [Expense]] = [:] {
         didSet { saveExpenses() }
     }
+    @Published var journals: [UUID: [JournalEntry]] = [:] {
+        didSet { saveJournals() }
+    }
+    @Published var emergencyInfos: [UUID: EmergencyInfo] = [:] {
+        didSet { saveEmergencyInfos() }
+    }
+    @Published var documents: [UUID: [TravelDocument]] = [:] {
+        didSet { saveDocuments() }
+    }
 
     var selectedTrip: Trip? {
         trips.first(where: { $0.id == selectedTripID })
@@ -45,6 +54,9 @@ class DataStore: ObservableObject {
             checklists.removeValue(forKey: id)
             activities.removeValue(forKey: id)
             expenses.removeValue(forKey: id)
+            journals.removeValue(forKey: id)
+            emergencyInfos.removeValue(forKey: id)
+            documents.removeValue(forKey: id)
             if selectedTripID == id {
                 selectedTripID = trips.first?.id
             }
@@ -86,8 +98,27 @@ class DataStore: ObservableObject {
         checklists[tripID] = list
     }
 
+    func updateChecklistItem(tripID: UUID, item: ChecklistItem) {
+        var list = checklists[tripID] ?? []
+        if let idx = list.firstIndex(where: { $0.id == item.id }) {
+            list[idx] = item
+        }
+        checklists[tripID] = list
+    }
+
     func resetChecklist(tripID: UUID) {
         checklists[tripID] = Self.defaultChecklist()
+    }
+
+    // MARK: - Weight Tracking
+    func totalPackedWeight(tripID: UUID) -> Double {
+        guard let list = checklists[tripID] else { return 0 }
+        return list.filter { $0.isChecked }.compactMap { $0.weight }.reduce(0, +)
+    }
+
+    func totalWeight(tripID: UUID) -> Double {
+        guard let list = checklists[tripID] else { return 0 }
+        return list.compactMap { $0.weight }.reduce(0, +)
     }
 
     // MARK: - Itinerary
@@ -156,6 +187,124 @@ class DataStore: ObservableObject {
         return ExpenseCategory.allCases.map { ($0, dict[$0] ?? 0) }
     }
 
+    // MARK: - Journal
+    func addJournalEntry(tripID: UUID, entry: JournalEntry) {
+        var list = journals[tripID] ?? []
+        list.append(entry)
+        journals[tripID] = list
+    }
+
+    func updateJournalEntry(tripID: UUID, entry: JournalEntry) {
+        var list = journals[tripID] ?? []
+        if let idx = list.firstIndex(where: { $0.id == entry.id }) {
+            list[idx] = entry
+        }
+        journals[tripID] = list
+    }
+
+    func deleteJournalEntry(tripID: UUID, entryID: UUID) {
+        var list = journals[tripID] ?? []
+        list.removeAll { $0.id == entryID }
+        journals[tripID] = list
+    }
+
+    func journalEntriesForDay(tripID: UUID, dayIndex: Int) -> [JournalEntry] {
+        (journals[tripID] ?? [])
+            .filter { $0.dayIndex == dayIndex }
+            .sorted { $0.date > $1.date }
+    }
+
+    // MARK: - Emergency Info
+    func getEmergencyInfo(tripID: UUID) -> EmergencyInfo {
+        emergencyInfos[tripID] ?? EmergencyInfo(tripID: tripID)
+    }
+
+    func updateEmergencyInfo(info: EmergencyInfo) {
+        emergencyInfos[info.tripID] = info
+    }
+
+    // MARK: - Documents
+    func addDocument(tripID: UUID, document: TravelDocument) {
+        var list = documents[tripID] ?? []
+        list.append(document)
+        documents[tripID] = list
+    }
+
+    func updateDocument(tripID: UUID, document: TravelDocument) {
+        var list = documents[tripID] ?? []
+        if let idx = list.firstIndex(where: { $0.id == document.id }) {
+            list[idx] = document
+        }
+        documents[tripID] = list
+    }
+
+    func deleteDocument(tripID: UUID, documentID: UUID) {
+        var list = documents[tripID] ?? []
+        list.removeAll { $0.id == documentID }
+        documents[tripID] = list
+    }
+
+    // MARK: - Trip Statistics
+    func totalTripsCount() -> Int {
+        trips.count
+    }
+
+    func totalDaysTraveled() -> Int {
+        trips.reduce(0) { sum, trip in
+            let days = Calendar.current.dateComponents([.day], from: trip.startDate, to: trip.endDate).day ?? 0
+            return sum + days + 1
+        }
+    }
+
+    func totalMoneySpent() -> Double {
+        trips.reduce(0) { sum, trip in
+            sum + totalSpent(tripID: trip.id)
+        }
+    }
+
+    func mostVisitedDestinations() -> [(String, Int)] {
+        var dict: [String: Int] = [:]
+        for trip in trips {
+            dict[trip.destination, default: 0] += 1
+        }
+        return dict.sorted { $0.value > $1.value }
+    }
+
+    func averageTripDuration() -> Double {
+        guard !trips.isEmpty else { return 0 }
+        let totalDays = totalDaysTraveled()
+        return Double(totalDays) / Double(trips.count)
+    }
+
+    func averageDailySpending() -> Double {
+        let totalDays = totalDaysTraveled()
+        guard totalDays > 0 else { return 0 }
+        return totalMoneySpent() / Double(totalDays)
+    }
+
+    func monthlySpending() -> [(String, Double)] {
+        var dict: [String: Double] = [:]
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM yyyy"
+        
+        for trip in trips {
+            if let expenseList = expenses[trip.id] {
+                for expense in expenseList {
+                    let key = formatter.string(from: expense.date)
+                    dict[key, default: 0] += expense.amount
+                }
+            }
+        }
+        return dict.sorted { $0.key < $1.key }
+    }
+
+    func averageRating(tripID: UUID) -> Double? {
+        guard let acts = activities[tripID] else { return nil }
+        let rated = acts.compactMap { $0.rating }
+        guard !rated.isEmpty else { return nil }
+        return Double(rated.reduce(0, +)) / Double(rated.count)
+    }
+
     // MARK: - Persistence
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
@@ -186,6 +335,24 @@ class DataStore: ObservableObject {
             UserDefaults.standard.set(data, forKey: "rp_expenses")
         }
     }
+    private func saveJournals() {
+        let dict = Dictionary(uniqueKeysWithValues: journals.map { ($0.key.uuidString, $0.value) })
+        if let data = try? encoder.encode(dict) {
+            UserDefaults.standard.set(data, forKey: "rp_journals")
+        }
+    }
+    private func saveEmergencyInfos() {
+        let dict = Dictionary(uniqueKeysWithValues: emergencyInfos.map { ($0.key.uuidString, $0.value) })
+        if let data = try? encoder.encode(dict) {
+            UserDefaults.standard.set(data, forKey: "rp_emergencyInfos")
+        }
+    }
+    private func saveDocuments() {
+        let dict = Dictionary(uniqueKeysWithValues: documents.map { ($0.key.uuidString, $0.value) })
+        if let data = try? encoder.encode(dict) {
+            UserDefaults.standard.set(data, forKey: "rp_documents")
+        }
+    }
 
     private func loadAll() {
         if let data = UserDefaults.standard.data(forKey: "rp_trips"),
@@ -210,6 +377,24 @@ class DataStore: ObservableObject {
         if let data = UserDefaults.standard.data(forKey: "rp_expenses"),
            let dict = try? decoder.decode([String: [Expense]].self, from: data) {
             expenses = Dictionary(uniqueKeysWithValues: dict.compactMap { k, v in
+                UUID(uuidString: k).map { ($0, v) }
+            })
+        }
+        if let data = UserDefaults.standard.data(forKey: "rp_journals"),
+           let dict = try? decoder.decode([String: [JournalEntry]].self, from: data) {
+            journals = Dictionary(uniqueKeysWithValues: dict.compactMap { k, v in
+                UUID(uuidString: k).map { ($0, v) }
+            })
+        }
+        if let data = UserDefaults.standard.data(forKey: "rp_emergencyInfos"),
+           let dict = try? decoder.decode([String: EmergencyInfo].self, from: data) {
+            emergencyInfos = Dictionary(uniqueKeysWithValues: dict.compactMap { k, v in
+                UUID(uuidString: k).map { ($0, v) }
+            })
+        }
+        if let data = UserDefaults.standard.data(forKey: "rp_documents"),
+           let dict = try? decoder.decode([String: [TravelDocument]].self, from: data) {
+            documents = Dictionary(uniqueKeysWithValues: dict.compactMap { k, v in
                 UUID(uuidString: k).map { ($0, v) }
             })
         }
